@@ -1,5 +1,6 @@
 elves=[]
 elf = 0
+largest = [0,0,0]
 
 
 with open("Day1Input.txt", "r") as file:
@@ -9,8 +10,9 @@ with open("Day1Input.txt", "r") as file:
             elf = 0
         else:
             elf = elf + int(line)
+elves.sort(reverse=True)
 
-print(max(elves))
+print(elves[0]+elves[1]+elves[2])
 
 
 
